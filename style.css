@@ -1,0 +1,116 @@
+/* Resetear márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fondo de la página */
+  body {
+    background: #ffecb3;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Título principal */
+  h1 {
+    font-size: 60px;
+    color: #ff6347;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Subtítulo */
+  .subtitulo {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #ff914d;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo del botón (centrado, grande y llamativo) */
+  button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 20px 60px;
+    margin-top: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+  }
+  
+  /* Estilo del mensaje */
+  .message {
+    display: none;
+    text-align: center;
+    background-color: #ffdd57;
+    padding: 40px;
+    margin-top: 50px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .message h2 {
+    font-size: 35px;
+    color: #ff6347;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Estilo de la imagen (centrada y espaciada) */
+  .image {
+    display: block;
+    margin: 20px auto;
+    width: 200px; /* Puedes ajustar el tamaño de la imagen según necesites */
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* Animación de los globos */
+  @keyframes balloonAnimation {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100vh); }
+  }
+  
+  .balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    animation: balloonAnimation 6s infinite ease-in;
+  }
+  
+  .balloon:nth-child(odd) {
+    background-color: #ff6347;
+  }
+  
+  .balloon:nth-child(even) {
+    background-color: #1e90ff;
+  }
+  
+  /* Canvas de confeti */
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
